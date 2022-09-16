@@ -1,0 +1,23 @@
+<div>
+    <form [formGroup]="uiForm">
+        <div><label>Name</label>
+            <input formControlName="name" matInput>
+            <span *ngIf="uiForm.controls['name']?.errors">Required</span>
+        </div>
+        <div><label>Email</label>
+            <input formControlName="email" matInput>
+            <span *ngIf="uiForm.controls['email']?.errors">Required</span>
+        </div>
+        <div><label>Gender</label>
+            <input formControlName="gender" matInput>
+            <span *ngIf="uiForm.controls['gender']?.errors">Required</span>
+        </div>
+        <div><label>Status</label>
+            <input formControlName="status" matInput>
+            <span *ngIf="uiForm.controls['status']?.errors">Required</span>
+        </div>
+        <div>
+            <button mat-button color="primary" class="primary-btn" (click)="updateUserDetails()">Submit</button>
+        </div>
+    </form>
+</div>
